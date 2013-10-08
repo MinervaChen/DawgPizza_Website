@@ -1,3 +1,4 @@
+/*Minerva Chen INFO 343 SID: 1128429*/
 /* Google web fonts 'Open Sans' (italic and normal) and 'Boogaloo' */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Boogaloo);
@@ -17,6 +18,13 @@ p {
     font-style: italic;
 }
 
+.logo{
+    border-radius: 5px;
+    border-style:outset;
+    border-width:5px;
+    border-color: black;
+}
+/* creates black content box with gray shadow*/
 .content-box {
     width: 80%;
     background-color: black;
@@ -82,11 +90,13 @@ h5 {
     font-style: italic;
     font-weight: bold;
 }
+
 ul{
     font-variant: small-caps;
     margin: 5px;
 }
 
+/*this is the footer*/
 .footer {
     border-width: 2px;   
     border-top-style: groove;
@@ -98,22 +108,22 @@ ul{
     text-shadow: 0.05em .1em black;
 }
 
+/*keeps all pictures floated to the left*/
 .pic {
     float: left;
     margin: 10px;
 }
 
+/*navigation bar is dark purple, and turns light purple when hovered over*/
 nav ul {
         background-color: purple;
         border-radius: 5px;
         margin-top: 10px;
         margin-bottom: 10px;
 }
-
 nav li {
         display: inline-block;
 }
-
 nav a {
         margin: auto;
         display: inline-block;
@@ -122,13 +132,20 @@ nav a {
         font-weight: bold;
         font-size: 90%;
 }
-
 nav a:link, 
 nav a:visited {
         text-decoration: none;
 }
-
 nav a:hover {
         background-color: #AB82FF;
         border-radius: 5px;
+}
+
+li a:visited {
+    color: white;
+}
+
+li a:hover {
+        color: #FFFFCC;
+        text-decoration: none;
 }
