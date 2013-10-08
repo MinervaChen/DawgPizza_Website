@@ -1,0 +1,134 @@
+/* Google web fonts 'Open Sans' (italic and normal) and 'Boogaloo' */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Boogaloo);
+
+/* reset CSS file to reset browser default styling to a consistent starting point */
+@import url(reset.css);
+
+body {
+    background-image: url(../img/brick.jpg);
+    background-repeat: repeat;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+}
+p {
+    margin: 5px;
+    font-style: italic;
+}
+
+.content-box {
+    width: 80%;
+    background-color: black;
+    margin: 10px auto;
+    box-shadow: 6px 6px 12px #555;
+    padding: 10px;
+    color: white;
+    font-size: 85%;
+    overflow: hidden;
+}
+
+.head {
+    margin: 5px auto;
+    padding: 5px;
+}
+
+.text-box {
+    margin: 10px auto;
+    padding: 20px;
+    color: #D0A9F5;
+    font-variant: small-caps;
+}
+dt{
+    font-size: 120%;
+}
+dd{
+    color: white;
+}
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: verdana, sans-serif;
+    color: white;
+    font-variant: small-caps;
+    text-shadow: .1em .1em #333;
+}
+
+h2{
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    font-family: "Times New Roman", sans-serif;
+    text-shadow: 0.05em .1em black;
+}
+
+h3{
+    font-size :150%;
+    font-weight: bold;
+    color: purple;
+    text-align: left;
+}
+
+h4{
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+}
+h5 {
+    text-align: center;
+    margin: 5px;
+    color: #FFFFCC;
+    font-style: italic;
+    font-weight: bold;
+}
+ul{
+    font-variant: small-caps;
+    margin: 5px;
+}
+
+.footer {
+    border-width: 2px;   
+    border-top-style: groove;
+    margin-top: 10px;
+    border-color: purple;
+    font-size: 80%;
+    font-style: italic;
+    color: white;
+    text-shadow: 0.05em .1em black;
+}
+
+.pic {
+    float: left;
+    margin: 10px;
+}
+
+nav ul {
+        background-color: purple;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+}
+
+nav li {
+        display: inline-block;
+}
+
+nav a {
+        margin: auto;
+        display: inline-block;
+        padding: 10px;
+        color: #FFF;
+        font-weight: bold;
+        font-size: 90%;
+}
+
+nav a:link, 
+nav a:visited {
+        text-decoration: none;
+}
+
+nav a:hover {
+        background-color: #AB82FF;
+        border-radius: 5px;
+}
