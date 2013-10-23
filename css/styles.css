@@ -18,14 +18,24 @@ p {
     font-style: italic;
 }
 
+:focus {
+        outline: white dotted 2px;
+        background-color: #AB82FF;
+}
 .logo{
     border-radius: 5px;
     border-style:outset;
     border-width:5px;
     border-color: black;
+    background-color: black;
+    opacity: .9;
+}
+
+.logo:hover{
+    opacity: 1;
 }
 /* creates black content box with gray shadow*/
-.content-box {
+.container{
     width: 80%;
     background-color: black;
     margin: 10px auto;
@@ -37,8 +47,9 @@ p {
 }
 
 .head {
-    margin: 5px auto;
+    margin: 5px;
     padding: 5px;
+    text-align: center;
 }
 
 .text-box {
@@ -46,6 +57,12 @@ p {
     padding: 20px;
     color: #D0A9F5;
     font-variant: small-caps;
+    overflow: hidden;
+}
+
+.text-box ul{
+    color: white;
+    text-align: center;
 }
 dt{
     font-size: 120%;
@@ -53,29 +70,33 @@ dt{
 dd{
     color: white;
 }
+
 h1 {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
     font-family: verdana, sans-serif;
     color: white;
     font-variant: small-caps;
     text-shadow: .1em .1em #333;
+    text-align: center;
 }
 
 h2{
-    font-size: 25px;
+    font-size: 16px;
     font-style: italic;
     font-weight: bold;
     color: white;
     font-family: "Times New Roman", sans-serif;
     text-shadow: 0.05em .1em black;
+    text-align: center;
 }
 
-h3{
-    font-size :150%;
+h3 {
+    text-align: center;
+    margin: 5px;
+    color: #FFFFCC;
+    font-style: italic;
     font-weight: bold;
-    color: purple;
-    text-align: left;
 }
 
 h4{
@@ -83,13 +104,7 @@ h4{
     font-weight: bold;
     text-align: center;
 }
-h5 {
-    text-align: center;
-    margin: 5px;
-    color: #FFFFCC;
-    font-style: italic;
-    font-weight: bold;
-}
+
 
 ul{
     font-variant: small-caps;
@@ -116,7 +131,7 @@ ul{
 
 /*navigation bar is dark purple, and turns light purple when hovered over*/
 nav ul {
-        background-color: purple;
+        background-color: #52197E;
         border-radius: 5px;
         margin-top: 10px;
         margin-bottom: 10px;
