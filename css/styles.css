@@ -23,10 +23,6 @@ p {
         background-color: #AB82FF;
 }
 .logo{
-    border-radius: 5px;
-    border-style:outset;
-    border-width:5px;
-    border-color: black;
     background-color: black;
     opacity: .9;
 }
@@ -52,24 +48,33 @@ p {
     text-align: center;
 }
 
-.text-box {
+.pizzaMenu {
     margin: 10px auto;
     padding: 20px;
     color: #D0A9F5;
-    font-variant: small-caps;
     overflow: hidden;
 }
 
-.text-box ul{
+.drinks {
     color: white;
     text-align: center;
+    font-variant: small-caps;
+    padding: 10px;
 }
-dt{
-    font-size: 120%;
-}
-dd{
+
+.desserts {
     color: white;
+    text-align: center;
+    font-variant: small-caps;
+    padding: 10px;
 }
+
+dl{
+    font-size: 90%;
+    color: white;
+    font-variant: small-caps;
+}
+
 
 h1 {
     font-size: 30px;
@@ -105,12 +110,13 @@ h4{
     text-align: center;
 }
 
-
-ul{
+dt{
     font-variant: small-caps;
-    margin: 5px;
 }
 
+.well{
+    background-color: #424242;
+}
 /*this is the footer*/
 .footer {
     border-width: 2px;   

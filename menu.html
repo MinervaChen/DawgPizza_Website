@@ -12,6 +12,15 @@
 
 	<!-- REPLACE 'your uw net id' with your UW net id -->
 	<meta name="author" content="chenm530">
+	<script src="http://www.dawgpizza.com/orders/menu.js"></script>
+	 <!-- hot link to minified jQuery library, version 2.0.3 -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script src="js/foods.js"></script>
+
+        <!-- Bootstrap JavaScript (if we need it) -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+        <!-- link to our JavaScript file -->
 </head>
 
 <body>
@@ -19,17 +28,15 @@
 		<div class = "head">
 			<a href="index.html"> <img class = "logo" src="img/logo.png" alt="LOGO" height="200" width="625"></a>
 		</div>
-		<nav>
+		<nav class="navbar navbar-inverse" role="navigation">
 	        <ul>
 	            <li><a href="index.html">Home</a></li>
 	            <li><a href="menu.html">Menu</a></li>
 	            <li><a href="about.html">About Us</a></li>
 	        </ul>
 		</nav>
-		<div class = "text-box">
-	        <img class = "pic" src="img/pizza-order.jpg" alt="pizza" height = "400" width = "400">
-			<h1> Pizzas </h1> 
-			<p>
+		<div class = "well">
+		<p>
 				All our Pizzas are made with hand-thrown thin crust, baked in real wood ovens. Choose from one of these sizes:
 			</p>
 			<ul>
@@ -38,61 +45,15 @@
 				<li>Large (17")</li>
 			</ul>
 			<h3> All pizzas can be customized--add a few ingredients, or take a few off-- for an extra $2. </h3>
+		</div>
+		<div class = "pizzaMenu">
+			<h1> Pizzas </h1>
+			<img class = "pic" src="img/pizza-order.jpg" alt="pizza" height = "400" width = "400">
 	    </div>
-	    <div class = "text-box">
-            <h1>Menu</h1>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class = "text-box">
-						<h4> Meat Pies </h4>
-						<dl>
-							<dt>Classic Pepperoni</dt>
-							<dd> - Pepperoni and Mozzarella on our Spicy Tomato Sauce. $10/$13/$16</dd>
-							<dt>The Hawaiian</dt>
-							<dd> - Canadian Bacon and Pineapple with Mozzarella on a rich Tomato Sauce.  $12/$14/$17</dd>
-							<dt>Duck, Duck, Goose</dt>
-							<dd> - Roasted Duck and Goose with Bacon, Chestnuts on a rich Plum Sauce.  $15/$17/$19</dd>
-							<dt>The Bambi</dt>
-							<dd> - Slow-cooked Venison with Red Cabbage on our famous Black Cherry Sauce.  $15/$17/$19</dd>
-							<dt>The Ultimate</dt>
-							<dd> - Pepperoni, Bacon, Canadian Bacon, Chicken, Duck, Goose, and Ground Beef with Smoked Mozzarella on our Spicy Tomato Sauce. Add Venison or Elk for an extra $2!  $15/$19/$23</dd>
-						</dl>
-			        </div>
-			    </div>
-                <div class="col-md-6">
-                	<div class = "text-box">
-						<h4> Vegetarian Pies </h4>
-						<dl>
-							<dt>Margherita</dt>
-							<dd> - Mozzarella, Basil, Salt on an Olive Oil Base.  $10/$13/$16</dd>
-							<dt>Veggie Madness</dt>
-							<dd> - Mushroom, Black Olive, Onions, Roasted Garlic, Squash and Roasted Eggplant on our Spicy Tomato Sauce.  $11/$14/$17</dd>
-							<dt>Forest Floor</dt>
-							<dd> - Three kinds of mushrooms with Mozzarella on a herb Tomato Sauce.  $11/$14/$17</dd>
-							<dt>Mr Green</dt>
-							<dd> - SRoasted Chicken with Romano on a Basil Pesto sauce. $13/$16/$19</dd>
-							<dt>Purple Monster</dt>
-							<dd> - Roasted Eggplant and Cabbage stir fried in sesame oil on a rich Plum Sauce.  $11/$14/$17</dd>
-						</dl>
-					</div>
-                </div>
-            </div>
-        </div>
-            <div class = "text-box">
-				<h4> Drinks </h4> 
-				<ul>
-					<li>Coke, Diet Coke, Sprite, Root Beer, or Irn Bru by the can ($4)</li>
-					<li>Rainier Beer by the can ($4)</li>
-					<li>House Red Wine by the glass or bottle ($10/$40)</li>
-				</ul>
-				<h4> Dessert </h4> 
-				<ul>
-					<li>Chocolate Gelato ($8)</li>
-					<li>Lemon Sorbet ($7)</li>
-					<li>Ricotta Cheese Cake ($10)</li>
-				</ul>        
-        	</div>
-
+	     
+	    <div class = "drinks"> <h4> Drinks </h4> </div>
+	    <div class = "desserts"> <h4> Desserts </h4> </div>
+ 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	</div>
@@ -101,5 +62,7 @@
 		<br>
 		Call us for delivery: 206-555-1212
 	</div>
+		
+
 </body>
 </html>
