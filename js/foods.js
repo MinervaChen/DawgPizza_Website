@@ -8,13 +8,14 @@ $("document").ready( function(){
         var name = document.createElement("dt");
         $(name).html(pizza.name+ " $:" + pizza.prices[0] + "/" + pizza.prices[1] + "/" + pizza.prices[2]);
         var description = document.createElement("dl");
+        $(description).html(pizza.description);
         if(pizza.vegetarian){
-            $(description).html(pizza.description + " (vegetarian)");
+            $(name).appendTo(".vegpizzas");
+            $(description).appendTo(".vegpizzas");
         } else {
-            $(description).html(pizza.description);
+            $(name).appendTo(".pizzaMenu");
+            $(description).appendTo(".pizzaMenu");
         }
-        $(name).appendTo(".pizzaMenu");
-        $(description).appendTo(".pizzaMenu");
     } //for
 
     //takes in the pizza data and fills the file with drink information

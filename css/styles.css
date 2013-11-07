@@ -48,7 +48,7 @@ p {
     text-align: center;
 }
 
-.pizzaMenu {
+.pizzaMenu , .vegpizzas{
     margin: 10px auto;
     padding: 20px;
     color: #D0A9F5;
@@ -133,6 +133,10 @@ dt{
 .pic {
     float: left;
     margin: 10px;
+}
+
+ul{
+    color: #D0A9F5;
 }
 
 /*navigation bar is dark purple, and turns light purple when hovered over*/
