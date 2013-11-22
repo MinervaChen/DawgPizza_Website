@@ -14,8 +14,7 @@ $("document").ready( function(){
             $(description).appendTo(".vegpizzas");
         } else {
             $(name).appendTo(".pizzaMenu");
-            $(description).appendTo(".pizzaMenu");
-        }
+            $(description).appendTo(".pizzaMenu");        }
     } //for
 
     //takes in the pizza data and fills the file with drink information
