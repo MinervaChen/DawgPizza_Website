@@ -17,6 +17,9 @@ p {
     margin: 5px;
     font-style: bold;
 }
+.hidden-submit{
+    display: none;
+}
 .modal-content{
     color: white;
     background-color: black;

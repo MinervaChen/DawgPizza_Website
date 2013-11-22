@@ -17,7 +17,7 @@ function Items(input){
 function CartModel(input) {
     this.items = [];
     this.name = "";
-    this.address = "";
+    this.address1 = "";
     this.address2 = "";
     this.zip = "";
     this.phone = "";
@@ -25,7 +25,7 @@ function CartModel(input) {
     this.nextCaption = "";
     
     this.clearCart = function(){
-        items = [];
+        this.items = [];
     };
 
     this.getQuantity = function(item){
@@ -39,7 +39,7 @@ function CartModel(input) {
     this.populateInfo = function(input){
         this.name = input.name;
         this.quantity = input.quantity;
-        this.address = input.address;
+        this.address1 = input.address1;
         this.address2 = input.address2;
         this.zip = input.zip;
         this.phone = input.phone;

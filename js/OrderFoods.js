@@ -92,14 +92,6 @@ $("document").ready( function(){
 		$(".col-xs-10").html("Total: $" + total + " + $" + (total * .095).toFixed(2) + " (tax) = $" + (total * 1.095).toFixed(2));
 	}
 
-	$(".submit-order").click(function(){
-		if(total < 20){
-			alert("you need at least $20 to order");
-		} else {
-			$("#submitOrderForm").modal();
-		}
-	});
-
 	function removeFromCart(){
 		var name = $(this).data("name");
 		var type = $(this).data("type");
@@ -129,7 +121,7 @@ $("document").ready( function(){
             });
         };
         return view;
-	} //createCartItemView()
+	} 
 // postCart()
 // posts the cart model to the server using
 // the supplied HTML form
@@ -146,7 +138,60 @@ function postCart(cart, cartForm) {
     cartForm.submit();
 
 } //postCart()
+/*
+$(".submit-order-btn").click(function() {
+        if (total >= 20) {// before taxes
+            $("#submitOrderForm").modal();
+            $(".finalSubmitButton").click(submitForm);
+            $(".minimum").html("");
+        } else {
+            $(".minimum").html("To save the environment, there is a minimum purchase of $20.");
+        }
+    });
 
 
+    function submitForm() {
+        cart.populateInfo({
+            name : $(".form-name").val(),
+            address1 : $(".form-line1").val(),
+            address2 : $(".form-line2").val(),
+            zip : $(".form-zip").val(),
+            phone : $(".form-phone").val(),
+            nextUrl : "http://students.washington.edu/pchiang/info343/dawgpizza4/index.html",
+            nextCaption : "Back to DawgPizza"
+        });
+        $("#jsonForm").val(JSON.stringify(cart));
+        $(".address-form").find('[type="submit"]').trigger("click");
+    }*/
+
+    $(".submit-order").click(function(){
+        if(total < 20){
+            alert("you need at least $20 to order");
+        } else {
+            $("#submitOrderForm").modal();
+            $(".finalSubmitButton").click(submitForm);
+        }
+    });
+
+    $(".clear-cart").click(function() {
+        cart.clearCart();
+        total = 0;
+        $(".cart-item").not(".template").remove();
+        $(".col-xs-10").html("Total: $" + total + " + $" + (total * .095).toFixed(2) + " (tax) = $" + (total * 1.095).toFixed(2));
+    });
+
+    function submitForm() {
+        cart.populateInfo({
+            name : $(".form-name").val(),
+            address1 : $(".form-line1").val(),
+            address2 : $(".form-line2").val(),
+            zip : $(".form-zip").val(),
+            phone : $(".form-phone").val(),
+            nextUrl : "http://students.washington.edu/chenm530/info343/Homework4/menu.html",
+            nextCaption : "Back to Menu"
+        });
+        $("#jsonForm").val(JSON.stringify(cart));
+        $(".address-form").find('[type="submit"]').trigger("click");
+    }
 
 });// document ready
