@@ -93,7 +93,7 @@ $("document").ready( function(){
 	    } else { //adds to the quantity and does not add a new button
 	    	cart.insert(item);
 	    	total += price;
-	    	$('.cart-item[data-name="' + name + '"].cart-item[data-size="' + size + '"]').html(" <span class=\"glyphicon glyphicon-remove\"></span> " + cart.getQuantity(item) + "x " + " for $" + price +" "+ size + " " + name);
+	    	$('.cart-item[data-name="' + name + '"].cart-item[data-size="' + size + '"]').html(" <span class=\"glyphicon glyphicon-remove\"></span> " + cart.getQuantity(item) + "x " + " for $" + price +" " + name + " : " + size);
 		}
 		$(".col-xs-10").html("Total: $" + total + " + $" + (total * .095).toFixed(2) + " (tax) = $" + (total * 1.095).toFixed(2));
 	}
