@@ -15,6 +15,7 @@ function Items(input){
 }
 
 function CartModel(input) {
+    //initializes the cartmodel to null
     this.items = [];
     this.name = "";
     this.address1 = "";
@@ -24,10 +25,12 @@ function CartModel(input) {
     this.nextUrl = "";
     this.nextCaption = "";
     
+    //clears cart
     this.clearCart = function(){
         this.items = [];
     };
 
+    //returns quantity
     this.getQuantity = function(item){
         var i = this.exists(item);
         if(i == -1){
@@ -36,6 +39,7 @@ function CartModel(input) {
         return this.items[i].quantity;
     }
 
+    //populates information when given in input
     this.populateInfo = function(input){
         this.name = input.name;
         this.quantity = input.quantity;
@@ -47,6 +51,7 @@ function CartModel(input) {
         this.nextCaption = input.nextCaption;
     }
 
+    //inserts an item and updates quantity
     this.insert = function(item){
         var x = this.exists(item);
         if(x > -1){
@@ -56,6 +61,7 @@ function CartModel(input) {
         }
     }
 
+    //tests if function exists
     this.exists = function(item){
         var x = -1;
         for(var i = 0; i < this.items.length; i++){
@@ -66,6 +72,7 @@ function CartModel(input) {
         return x;
     }
 
+    //removes item from website
     this.removeItem = function(item){
         var index = this.exists(item);
         if(index > -1){
@@ -73,13 +80,3 @@ function CartModel(input) {
         }
     }
 }
-
-
-/*
-    createListModel()
-
-    Creates a new instance of a ListModel, applying the
-    configuration properties (if any). The config parameter
-    may contain the following properties:
-    - items (array of objects) the model objects
-*/
