@@ -70,7 +70,7 @@ $("document").ready( function(){
 	        name : name,
 	        type : type,
 	        size : size,
-	        quantity : 0
+	        quantity : 1
 	    });
 
         //add button if it does not exist
@@ -79,7 +79,7 @@ $("document").ready( function(){
 	    	total += price;
 	    	var itemHtml = $(".template").clone().removeClass("template");
 	    	if(type == "pizza"){
-	    		itemHtml.html( "<span class=\"glyphicon glyphicon-remove\"></span> "+ name + " for $" + price + " : " + size);
+	    		itemHtml.html( "<span class=\"glyphicon glyphicon-remove\"></span> " + name + " for $" + price + " : " + size);
 	    	}else {
 				itemHtml.html(" <span class=\"glyphicon glyphicon-remove\"></span> " + name + " for $" + price);
 	    	}
@@ -93,7 +93,7 @@ $("document").ready( function(){
 	    } else { //adds to the quantity and does not add a new button
 	    	cart.insert(item);
 	    	total += price;
-	    	$(" <span class=\"glyphicon glyphicon-remove\"></span> " + '.cart-item[data-name="' + name + '"].cart-item[data-size="' + size + '"]').html(cart.getQuantity(item) + 1 + "x " + " for $" + price +" "+ size + " " + name);
+	    	$('.cart-item[data-name="' + name + '"].cart-item[data-size="' + size + '"]').html(" <span class=\"glyphicon glyphicon-remove\"></span> " + cart.getQuantity(item) + "x " + " for $" + price +" "+ size + " " + name);
 		}
 		$(".col-xs-10").html("Total: $" + total + " + $" + (total * .095).toFixed(2) + " (tax) = $" + (total * 1.095).toFixed(2));
 	}
@@ -115,7 +115,7 @@ $("document").ready( function(){
 	        quantity : 0
 		});	
 			
-		total -= price * (cart.getQuantity(item) + 1);
+		total -= price * (cart.getQuantity(item));
 		$(".col-xs-10").html("Total: $" + total + " + $" + (total * .095).toFixed(2) + " (tax) = $" + (total * 1.095).toFixed(2));
 
 		cart.removeItem(item);
