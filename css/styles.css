@@ -17,7 +17,10 @@ p {
     margin: 5px;
     font-style: bold;
 }
-
+.modal-content{
+    color: white;
+    background-color: black;
+}
 .cart button{
     display: block;
 }

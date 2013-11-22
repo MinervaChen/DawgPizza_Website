@@ -73,9 +73,9 @@ $("document").ready( function(){
 	    	total += price;
 	    	var itemHtml = $(".template").clone().removeClass("template");
 	    	if(type == "pizza"){
-	    		itemHtml.html(name + " : " + size + " <span class=\"glyphicon glyphicon-remove\"></span>");
+	    		itemHtml.html(name + " for $" + price + " : " + size + " <span class=\"glyphicon glyphicon-remove\"></span>");
 	    	}else {
-				itemHtml.html(name + " <span class=\"glyphicon glyphicon-remove\"></span>");
+				itemHtml.html(name + " for $" + price + " <span class=\"glyphicon glyphicon-remove\"></span>");
 	    	}
 	    	itemHtml.attr("data-name", name);
 	    	itemHtml.attr("data-type", type);
@@ -87,10 +87,19 @@ $("document").ready( function(){
 	    } else {
 	    	cart.insert(item);
 	    	total += price;
-	    	$('.cart-item[data-name="' + name + '"].cart-item[data-size="' + size + '"]').html(cart.getQuantity(item) + 1 + "x " + size + " " + name + " <span class=\"glyphicon glyphicon-remove\"></span>");
+	    	$('.cart-item[data-name="' + name + '"].cart-item[data-size="' + size + '"]').html(cart.getQuantity(item) + 1 + "x " + " for $" + price +" "+ size + " " + name + " <span class=\"glyphicon glyphicon-remove\"></span>");
 		}
-		$(".col-xs-2").html("$" + total);
+		$(".col-xs-10").html("Total: $" + total + " + $" + (total * .095).toFixed(2) + " (tax) = $" + (total * 1.095).toFixed(2));
 	}
+
+	$(".submit-order").click(function(){
+		if(total < 20){
+			alert("you need at least $20 to order");
+		} else {
+			$("#submitOrderForm").modal();
+		}
+	});
+
 	function removeFromCart(){
 		var name = $(this).data("name");
 		var type = $(this).data("type");
@@ -107,13 +116,10 @@ $("document").ready( function(){
 		});	
 			
 		total -= price * (cart.getQuantity(item) + 1);
-		$(".col-xs-2").html("$" + total);
+		$(".col-xs-10").html("Total: $" + total + " + $" + (total * .095).toFixed(2) + " (tax) = $" + (total * 1.095).toFixed(2));
 
 		cart.removeItem(item);
 		$(this).remove();
-		if(total == 0){
-			$(".submit-order-btn").hide();
-		}
 	}
 	function createCartItemView(config) {
         var view = createTemplateView(config);
@@ -142,5 +148,5 @@ function postCart(cart, cartForm) {
 } //postCart()
 
 
-	
+
 });// document ready
